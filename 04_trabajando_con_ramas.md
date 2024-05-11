@@ -31,4 +31,7 @@
 
 6. **`git checkout <ID del commit>`**:
    - Úsalo si solo deseas revisar el estado de un commit específico sin perder los cambios posteriores. Esto te permitirá "viajar en el tiempo", pero estarás en un estado de "detached HEAD".
+  
+7. **`git switch -`**:
+   - Este comando te llevará de vuelta a la rama en la que estabas antes de hacer checkout al commit específico, y tu repositorio volverá al estado en el que estaba antes de realizar ese checkout.
 
