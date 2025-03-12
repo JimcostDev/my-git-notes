@@ -1,55 +1,63 @@
 # Configuración de Git y generación de una clave SSH en Windows
 
-1. Crea una cuenta en GitHub:
-   - Ve al sitio web de GitHub (https://github.com) y crea una cuenta si aún no tienes una.
+## 🔹 1. Crear una cuenta en GitHub
+- Ve a [GitHub](https://github.com) y regístrate si aún no tienes una cuenta.
 
-2. Instala Git:
-   - Descarga Git desde https://git-scm.com/download/win.
-   - Ejecuta el instalador y sigue los pasos para completar la instalación.
+---
 
-3. Configuración global de Git:
-   - Abre el "Git Bash" desde el menú de inicio o mediante clic derecho en el Explorador de Archivos y seleccionando "Git Bash Here".
-   - Ejecuta los siguientes comandos, reemplazando "Tu nombre" y "tu@email.com" con tu información:
+## 🔹 2. Instalar Git
+- Descarga Git desde [git-scm.com](https://git-scm.com/download/win).
+- Ejecuta el instalador y sigue las instrucciones para completar la instalación.
 
-     ```
-     git config --global user.name "Tu nombre"
-     git config --global user.email "tu@email.com"
-     ```
+---
 
-4. Generación de una clave SSH:
-   - Abre el "Git Bash".
-   - Ejecuta el siguiente comando para generar una nueva clave SSH:
+## 🔹 3. Configuración global de Git
+- Abre **Git Bash** desde el menú de inicio o haciendo clic derecho en un directorio y seleccionando *Git Bash Here*.
+- Configura tu nombre y correo electrónico globalmente:
 
-     ```
-     ssh-keygen -t rsa -b 4096 -C "tu_email@example.com"
-     ```
+```shell
+git config --global user.name "Tu nombre"
+git config --global user.email "tu@email.com"
+```
 
-     - Reemplaza "tu_email@example.com" con tu dirección de correo electrónico asociada a tu cuenta de GitHub.
-     - Presiona Enter para aceptar la ubicación predeterminada y deja la frase de contraseña en blanco o crea una si deseas mayor seguridad.
+---
 
-5. Copiar la clave SSH:
-   - Abre el Explorador de Archivos.
-   - Navega hasta la carpeta `.ssh`, ubicada en tu directorio de usuario (por ejemplo, `C:\Users\TuUsuario\.ssh`).
-   - Haz clic derecho en el archivo de clave pública (con extensión `.pub`) y selecciona "Abrir con" y luego elige un editor de texto.
-   - Selecciona todo el contenido del archivo y cópialo al portapapeles (`Ctrl + C`).
+## 🔹 4. Generación de una clave SSH
+- En **Git Bash**, ejecuta:
 
-6. Agregar la clave SSH a tu cuenta de GitHub:
-   - Inicia sesión en tu cuenta de GitHub.
-   - Haz clic en tu avatar en la esquina superior derecha y selecciona "Settings" (Configuración) en el menú desplegable.
-   - Navega a "SSH and GPG keys" (Claves SSH y GPG).
-   - Haz clic en "New SSH key" (Nueva clave SSH).
-   - Dale un título descriptivo a la clave en el campo "Title" (Título).
-   - Pega la clave SSH copiada anteriormente en el campo "Key" (Clave).
-   - Haz clic en "Add SSH key" (Agregar clave SSH) para guardarla.
+```shell
+ssh-keygen -t rsa -b 4096 -C "tu_email@example.com"
+```
 
-7. Configuración específica del repositorio:
-   - En el directorio del repositorio donde deseas asociar la cuenta de GitHub, abre el "Git Bash".
-   - Ejecuta los siguientes comandos, reemplazando "Nombre de usuario" y "correo@example.com" con los datos de la cuenta de GitHub:
+- Reemplaza *tu_email@example.com* con tu correo asociado a GitHub.
+- Presiona *Enter* para aceptar la ubicación predeterminada (`C:\Users\TuUsuario\.ssh\id_rsa`).
+- Puedes dejar la frase de contraseña en blanco o definir una por seguridad.
 
-     ```
-     git config user.name "Nombre de usuario"
-     git config user.email "correo@example.com"
-     ```
+---
 
-Estos pasos te ayudarán a configurar Git y generar una clave SSH en Windows para asociarla a tu cuenta de GitHub. Recuerda que puedes utilizar la misma configuración de Git para trabajar con varios repositorios, pero cada repositorio puede tener una configuración específica.
+## 🔹 5. Copiar la clave SSH
+- Abre el Explorador de Archivos y ve a `C:\Users\TuUsuario\.ssh`.
+- Abre el archivo **id_rsa.pub** con un editor de texto.
+- Copia su contenido al portapapeles (`Ctrl + C`).
 
+---
+
+## 🔹 6. Agregar la clave SSH en GitHub
+1. Inicia sesión en GitHub.
+2. Ve a **Settings** (*Configuración*).
+3. Dirígete a **SSH and GPG keys**.
+4. Haz clic en **New SSH key** (*Nueva clave SSH*).
+5. Asigna un nombre en *Title* y pega la clave copiada en *Key*.
+6. Haz clic en **Add SSH key**.
+
+---
+
+## 🔹 7. Configuración específica del repositorio
+Si deseas establecer una configuración distinta en un repositorio específico:
+
+```shell
+git config user.name "Nombre de usuario"
+git config user.email "correo@example.com"
+```
+
+Este proceso garantiza que Git esté correctamente configurado y autenticado con GitHub a través de SSH en Windows. 🚀
