@@ -1,22 +1,42 @@
 ## Git: Comandos Básicos
 
-### `git init`
+### 🛠️ **Inicializar un repositorio (`git init`)**
+El comando `git init` crea un nuevo repositorio de Git en un directorio existente. Al ejecutarlo, Git genera una carpeta oculta llamada `.git`, que contiene toda la información necesaria para el control de versiones, como el historial de cambios, las ramas y la configuración del repositorio.
 
-El comando `git init` se utiliza para inicializar un nuevo repositorio de Git en un directorio existente. Al ejecutar `git init`, Git crea una nueva carpeta oculta llamada ".git" en el directorio actual. Esta carpeta contiene toda la información necesaria para el control de versiones de Git, como el historial de cambios, las ramas y las configuraciones.
+```shell
+git init
+```
 
-### `git add`
+---
 
-El comando `git add` se utiliza para agregar archivos al área de preparación (staging area) en Git. Cuando realizas cambios en tus archivos en el directorio de trabajo, debes usar `git add` para seleccionar los archivos que deseas incluir en el próximo commit. Puedes agregar archivos de forma individual especificando su nombre (`git add archivo.txt`) o agregar todos los archivos modificados en el directorio actual utilizando el comodín `*` (`git add *`).
+### 📌 **Agregar cambios al área de preparación (`git add`)**
+El comando `git add` mueve archivos modificados o nuevos al área de preparación (staging area), indicándole a Git que deben incluirse en el próximo commit.
 
-### `git commit`
+- Agregar un archivo específico:
+```shell
+git add archivo.txt
+```
 
-El comando `git commit` se utiliza para confirmar los cambios que están en el área de preparación y guardarlos en el repositorio. Cada commit en Git representa una versión específica de tu proyecto. Para realizar un commit, debes proporcionar un mensaje descriptivo que explique los cambios realizados. Por ejemplo, puedes utilizar `git commit -m "Agrega nuevas funcionalidades"` para hacer un commit con un mensaje específico.
+- Agregar todos los archivos modificados:
+```shell
+git add .
+```
 
-El flujo típico de trabajo con estos comandos es el siguiente:
+💡 **Nota:** `git add .` agrega todos los archivos modificados y nuevos en el directorio actual.
 
-1. Inicias un nuevo repositorio en un directorio existente con `git init`.
-2. Realizas cambios en tus archivos en el directorio de trabajo.
-3. Utilizas `git add` para agregar los archivos modificados o nuevos al área de preparación.
-4. Utilizas `git commit` para confirmar los cambios en el repositorio, junto con un mensaje descriptivo.
+---
 
-Estos comandos básicos de Git te permiten comenzar a versionar y controlar los cambios en tu proyecto de manera efectiva.
+### ✅ **Confirmar cambios en el repositorio (`git commit`)**
+El comando `git commit` guarda los cambios agregados al área de preparación en el historial del repositorio. Cada commit representa una versión específica del proyecto y debe incluir un mensaje descriptivo.
+
+```shell
+git commit -m "Mensaje descriptivo del cambio"
+```
+
+💡 **Flujo de trabajo típico en Git:**
+1. Inicializar un repositorio con `git init` (solo una vez por proyecto).
+2. Modificar o agregar archivos.
+3. Usar `git add` para preparar los archivos para el commit.
+4. Confirmar los cambios con `git commit -m "Descripción de los cambios"`.
+
+Con estos comandos básicos, puedes comenzar a gestionar versiones de tu proyecto de manera eficiente. 🚀
