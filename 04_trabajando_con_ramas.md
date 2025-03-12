@@ -1,37 +1,38 @@
-## Trabajar con ramas, cambiar entre ellas, fusionar cambios y deshacer cambios.
+## Trabajar con ramas, cambiar entre ellas, fusionar cambios y deshacer cambios
 
-- `git log --oneline`: Muestra un registro de los commits en una sola línea, proporcionando un resumen conciso del historial del repositorio.
+### 📌 **Gestionar ramas**  
+- **`git branch`** → Lista, crea o elimina ramas.  
+- **`git checkout <nombre de la rama>`** → Cambia entre ramas.  
+- **`git checkout -b <nombre de la rama>`** → Crea y cambia a una nueva rama en un solo paso.  
+- **`git switch <nombre de la rama>`** → Alternativa moderna a `git checkout` para cambiar de rama.  
 
-- `git branch`: Permite listar, crear o eliminar ramas.
+### 🔀 **Fusionar cambios**  
+- **`git merge <rama>`** → Fusiona los cambios de una rama en otra.  
 
-- `git checkout`: Se utiliza para cambiar entre ramas o versiones de archivos.
+### 📜 **Historial de cambios**  
+- **`git log --oneline`** → Muestra un historial de commits en formato resumido.  
 
-- `git checkout -b`: Crea una nueva rama y cambia a ella en un solo paso.
+---
 
-- `git merge`: Fusiona los cambios de una rama en otra.
+## Deshacer cambios en Git  
 
+### 🔄 **Deshacer cambios en el directorio de trabajo (antes de `git add`)**  
+- **`git checkout -- <archivo>`** → Restaura un archivo específico a su última versión confirmada.  
+- **`git restore .`** → Restaura todos los archivos modificados al último commit (equivalente a `git checkout -- .`).  
 
-## Deshacer cambios en Git
+### 🚫 **Quitar cambios del área de preparación (`git add` pero sin `git commit`)**  
+- **`git reset HEAD <archivo>`** → Quita un archivo del área de staging sin perder los cambios.  
+- **`git reset .`** → Quita todos los archivos del área de staging sin perder los cambios.  
 
-1. **`git checkout -- <nombre del archivo>`**:
-   - Úsalo para revertir los cambios locales en un archivo específico antes de hacer `git add`.
+### ❌ **Deshacer commits**  
+- **`git reset --hard HEAD`** → Revierte completamente el último commit y borra los cambios locales.  
+- **`git reset --hard <ID del commit>`** → Vuelve a un commit específico y elimina todos los cambios posteriores.  
 
-2. **`git reset HEAD <nombre del archivo>`**:
-   - Úsalo para quitar un archivo específico del área de preparación después de hacer `git add`, pero antes de hacer `git commit`.
+### ⏪ **Explorar commits anteriores sin afectar la historia**  
+- **`git checkout <ID del commit>`** → Permite ver un commit específico sin modificar la historia (modo `detached HEAD`).  
+- **`git switch -`** → Vuelve rápidamente a la última rama en la que estabas.  
 
-3. **`git reset`**:
-   - Úsalo para quitar todos los archivos del área de preparación después de hacer `git add`, pero antes de hacer `git commit`.
+### 🧹 **Eliminar archivos no rastreados**  
+- **`git clean -fd`** → Borra archivos y carpetas no rastreadas de forma permanente.  
 
-4. **`git reset --hard HEAD`**:
-   - Úsalo para deshacer completamente el último commit, borrando los cambios realizados desde ese commit y revertiendo los archivos en tu directorio de trabajo al estado en el que estaban en el último commit.
-   - Útil si deseas deshacer completamente el último commit y perder los cambios locales no guardados.
-
-5. **`git reset --hard <ID del commit>`**:
-   - Úsalo si deseas volver a un commit específico y eliminar todos los cambios posteriores. Esto reescribirá la historia del repositorio y los cambios posteriores se perderán.
-
-6. **`git checkout <ID del commit>`**:
-   - Úsalo si solo deseas revisar el estado de un commit específico sin perder los cambios posteriores. Esto te permitirá "viajar en el tiempo", pero estarás en un estado de "detached HEAD".
-  
-7. **`git switch -`**:
-   - Este comando te llevará de vuelta a la rama en la que estabas antes de hacer checkout al commit específico, y tu repositorio volverá al estado en el que estaba antes de realizar ese checkout.
-
+---
