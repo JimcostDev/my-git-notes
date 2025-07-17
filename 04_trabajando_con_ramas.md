@@ -5,10 +5,13 @@
 ### 🌿 **Espacio de trabajo / Inicio de ramas**  
 > Crear, cambiar y listar ramas
 
-- **`git branch`** → Lista, crea o elimina ramas.  
-- **`git checkout <nombre de la rama>`** → Cambia entre ramas.  
-- **`git checkout -b <nombre de la rama>`** → Crea y cambia a una nueva rama en un solo paso.  
-- **`git switch <nombre de la rama>`** → Alternativa moderna a `git checkout` para cambiar de rama.  
+- **`git branch`** → Lista las ramas locales.  
+- **`git branch <nombre>`** → Crea una nueva rama sin cambiar a ella.  
+- **`git branch -d <nombre>`** → Elimina una rama (solo si fue fusionada).  
+- **`git branch -D <nombre>`** → Fuerza la eliminación de una rama sin importar si fue fusionada.  
+- **`git checkout -b <nombre>`** → Crea y cambia a una nueva rama en un solo paso.  
+- **`git switch <nombre>`** → Alternativa moderna a `git checkout` para cambiar de rama.
+- **`git switch -c <nombre>`** → Crear una rama y directamente moverte a ella en lugar de usar `git checkout -b`. 
 
 ### 🔀 **Área de trabajo / Fusionar cambios**  
 > Combina ramas ya existentes
