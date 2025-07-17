@@ -42,7 +42,9 @@
 > Cambios ya confirmados con `git commit`
 
 - **`git reset --hard HEAD`** → Elimina el último commit y borra todos los cambios locales.  
-- **`git reset --hard <ID del commit>`** → Vuelve a un commit específico y elimina todo lo posterior.  
+- **`git reset --soft <ID del commit>`** → Vuelve a un commit anterior pero mantiene todos los cambios en staging (listos para hacer commit de nuevo).
+- **`git reset --mixed <ID del commit>`** →  (por defecto) → Vuelve a un commit anterior, mantiene los cambios en el directorio de trabajo, pero los saca del staging.
+- **`git reset --hard <ID del commit>`** → Vuelve a un commit anterior y borra todos los cambios posteriores, tanto en staging como en el directorio de trabajo.    
 - **`git checkout <ID del commit>`** → Navega a un commit anterior sin alterar el historial (modo `detached HEAD`).  
 - **`git switch -`** → Cambia de nuevo a la última rama visitada.  
 
