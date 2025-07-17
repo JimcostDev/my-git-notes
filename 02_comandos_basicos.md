@@ -17,7 +17,11 @@ El comando `git add` mueve archivos modificados o nuevos al área de preparació
 git add archivo.txt
 ```
 
-- Agregar todos los archivos modificados:
+- Agregar todos los archivos modificados: Ideal para preparar todos los cambios antes de un commit.
+```shell
+git add -A
+```
+- Añade archivos solo dentro del directorio actual y subdirectorios. Limitado al directorio actual (no sube cambios fuera de la carpeta en la que estás).
 ```shell
 git add .
 ```
