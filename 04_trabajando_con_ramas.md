@@ -36,7 +36,7 @@
 
 - **`git reset HEAD <archivo>`** → Saca un archivo del staging sin perder los cambios.  
 - **`git reset .`** → Saca todos los archivos del staging sin perder cambios.  
-- **`git rm --cached <archivo>`** → Deja de rastrear un archivo sin borrarlo del disco.  
+- **`git rm --cached <archivo>`** →  Saca el archivo del área de staging y pero no borra el archivo de tu carpeta local. 
 
 ### 🗃️ **Repositorio / Historial de commits**  
 > Cambios ya confirmados con `git commit`
