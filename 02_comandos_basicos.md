@@ -21,13 +21,10 @@ git add archivo.txt
 ```shell
 git add -A
 ```
-- Añade archivos solo dentro del directorio actual y subdirectorios. Limitado al directorio actual (no sube cambios fuera de la carpeta en la que estás).
+- Añade archivos solo dentro del directorio actual y subdirectorios (no sube cambios fuera de la carpeta en la que estás).
 ```shell
 git add .
 ```
-
-💡 **Nota:** `git add .` agrega todos los archivos modificados y nuevos en el directorio actual.
-
 ---
 
 ### ✅ **Confirmar cambios en el repositorio (`git commit`)**
