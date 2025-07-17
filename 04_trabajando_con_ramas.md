@@ -49,5 +49,15 @@
 - **`git reset --mixed <ID del commit>`** →  (por defecto) → Vuelve a un commit anterior, mantiene los cambios en el directorio de trabajo, pero los saca del staging.
 - **`git reset --hard <ID del commit>`** → Vuelve a un commit anterior y borra todos los cambios posteriores, tanto en staging como en el directorio de trabajo.    
 - **`git checkout <ID del commit>`** → Navega a un commit anterior sin alterar el historial (modo `detached HEAD`).  
-- **`git switch -`** → Cambia de nuevo a la última rama visitada.  
+- **`git switch -`** → Cambia de nuevo a la última rama visitada.
+  
+### 🧭 **Volver atrás en tus movimientos (`reflog`)**
+
+- **`git reflog`** → Muestra el historial de todos los movimientos recientes de `HEAD`, incluyendo cambios de ramas, commits y checkouts.  
+  Útil para volver al **último commit o rama visitada**, incluso después de usar `git checkout <ID>`.
+
+> [!TIP]
+> Puedes combinarlo con:
+> - **`git switch -`** → Vuelve a la última rama en la que estabas (muy útil tras ver un commit antiguo).
+> - **`git switch <nombre-de-la-rama>`** → Vuelve manualmente a la rama deseada si sabes su nombre.
 
