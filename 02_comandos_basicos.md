@@ -41,3 +41,18 @@ git commit -m "Mensaje descriptivo del cambio"
 4. Confirmar los cambios con `git commit -m "Descripción de los cambios"`.
 
 Con estos comandos básicos, puedes comenzar a gestionar versiones de tu proyecto de manera eficiente. 🚀
+
+---
+
+### 🏷️ **Gestionar etiquetas (`git tag`)**
+
+- **`git tag`** → Lista todas las etiquetas (tags) creadas en el repositorio.  
+- **`git tag <nombre>`** → Crea una etiqueta ligera en el commit actual.  
+- **`git tag -a <nombre> -m "mensaje"`** → Crea una etiqueta anotada (con mensaje y metadatos).  
+- **`git show <nombre>`** → Muestra información sobre un tag específico (solo anotados).  
+- **`git tag -d <nombre>`** → Elimina una etiqueta local.  
+- **`git push origin <nombre>`** → Sube una etiqueta al repositorio remoto.  
+- **`git push origin --tags`** → Sube todas las etiquetas locales al remoto.
+
+> 📝 Las etiquetas se usan comúnmente para marcar **versiones de producción o releases**, como `v1.0.0`, `v2.1`, etc.
+
