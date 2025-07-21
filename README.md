@@ -25,6 +25,12 @@ git config --global user.email "tu@email.com"
 ## 🔹 4. Generación de una clave SSH
 - En **Git Bash**, ejecuta:
 
+# Más moderno y recomendado
+```shell
+ssh-keygen -t ed25519 -C "tu_email@example.com"
+```
+
+# Compatible con todo, pero más pesado
 ```shell
 ssh-keygen -t rsa -b 4096 -C "tu_email@example.com"
 ```
