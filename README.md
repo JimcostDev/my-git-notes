@@ -55,7 +55,7 @@ ssh-keygen -t rsa -b 4096 -C "tu_email@example.com"
 4. Haz clic en **New SSH key** (*Nueva clave SSH*).
 5. Asigna un nombre en *Title* y pega la clave copiada en *Key*.
 6. Haz clic en **Add SSH key**.
-
+7. Prueba la conexión: `ssh -T git@github.com`
 ---
 
 ## 🔹 7. Configuración específica del repositorio
