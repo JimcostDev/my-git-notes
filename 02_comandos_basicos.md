@@ -56,3 +56,14 @@ Con estos comandos básicos, puedes comenzar a gestionar versiones de tu proyect
 
 > 📝 Las etiquetas se usan comúnmente para marcar **versiones de producción o releases**, como `v1.0.0`, `v2.1`, etc.
 
+### 🚀 Convencional Commits:
+La idea es usar un prefijo que describa el tipo de cambio:
+- **feat**→ cuando agregas una funcionalidad nueva
+- **fix**→ cuando corriges un bug
+- **docs** → cambios en documentación
+- **style** → cambios de formato, espacios, comas, etc. (sin afectar código)
+- **refactor** → reestructuración interna, sin cambiar comportamiento
+- **test** → cambios o añadidos en tests
+- **chore** → tareas de mantenimiento que no afectan directamente al código de la app
+(ej: actualizar dependencias, cambiar configs, scripts de build, etc.)
+
